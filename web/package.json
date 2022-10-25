@@ -1,0 +1,78 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3005",
+    "build": "next build",
+    "start": "next start -p 3005",
+    "lint": "next lint",
+    "lint:fix": "eslint src/*.js --fix",
+    "pre-commit": "lint-staged",
+    "format": "prettier --write .",
+    "prepare": "cd ../ && husky install ./web"
+  },
+  "lint-staged": {
+    "*.(js|css)": [
+      "prettier --write",
+      "git add"
+    ],
+    ".js": [
+      "npm run lint:fix",
+      "npm run lint"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@headlessui/react": "^1.6.6",
+    "@headlessui/tailwindcss": "^0.1.0",
+    "@reduxjs/toolkit": "^1.8.3",
+    "@tanstack/react-query": "^4.0.10",
+    "antd": "^4.21.3",
+    "axios": "^0.27.2",
+    "chart.js": "^3.9.1",
+    "cookie": "^0.5.0",
+    "daisyui": "^2.19.0",
+    "formik": "^2.2.9",
+    "i": "^0.3.7",
+    "js-cookie": "^3.0.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "next": "12",
+    "next-i18next": "^11.0.0",
+    "next-redux-wrapper": "^7.0.5",
+    "npm": "^8.13.2",
+    "react": "^18.2.0",
+    "react-calendar": "^3.7.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
+    "react-hot-toast": "^2.3.0",
+    "react-icons": "^4.4.0",
+    "react-notifications": "^1.7.3",
+    "react-redux": "^8.0.2",
+    "react-toastify": "^9.0.7",
+    "react-use": "^17.4.0",
+    "react-webcam": "^7.0.1",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "sass": "^1.53.0",
+    "socket.io-client": "^4.5.1",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tanstack/react-query-devtools": "^4.0.10",
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.1.6",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "redux-devtools-extension": "^2.13.9",
+    "tailwindcss": "^3.1.5"
+  }
+}
